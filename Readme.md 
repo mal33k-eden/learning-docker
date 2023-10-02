@@ -1,0 +1,7 @@
+COMMANDS:
+
+docker build .
+docker build -t [name]
+docker run -it [name]
+docker run -p [port]:[port] [name]
+
