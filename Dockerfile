@@ -1,13 +1,13 @@
 FROM node:alpine
 
-WORKDIR /usr/app
+WORKDIR '/app'
 #copying package.json file from our root dir
 #to working dir to prevent reinstalling of packages when there are no changes
-COPY ./package.json ./
+COPY package.json .
 
 RUN npm install
 
 #copying everything from our root dir to working dir
-COPY ./ ./
+COPY . .
 
 CMD ["npm", "start"]
